@@ -1,26 +1,168 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* globals.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.login-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff; /* White background */
+  flex-direction: column;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.login-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.animate-brand {
+  animation: fadeSlideIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+.back-btn {
+  position: sticky;
+  top: 12px;
+  background: white;
+  z-index: 10;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #1fa463;
+}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 🔑 centers tagline */
+}
+
+
+.brand-name {
+  display: flex;
+  align-items: center;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+
+
+.brand-prefix {
+  color: #16a34a; /* professional green */
+  font-weight: 600;
+  margin-right: 2px;
+}
+
+.brand-ayur {
+  color: #f59e0b;
+}
+
+.brand-vidya {
+  color: #0ea5e9;
+}
+
+
+.brand-tagline {
+  font-size: 14px;
+  color: #666;
+  margin-top: 6px;
+  text-align: center;   /* 🔑 ensures visual centering */
+  letter-spacing: 0.3px;
+}
+
+
+.login-brand img {
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.login-card {
+  background: #fdfdfd;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-card h2 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+.login-card input:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 5px rgba(37,117,252,0.4);
+}
+
+.login-card button {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.login-card button.login-btn {
+  background-color: #2575fc;
+  color: white;
+}
+
+.login-card button.login-btn:hover {
+  background-color: #1a5cd8;
+}
+
+.login-card button.signup-btn {
+  background-color: #eee;
+  color: #333;
+}
+
+.login-card button.signup-btn:hover {
+  background-color: #ddd;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 14px;
 }

@@ -1,0 +1,81 @@
+/* login.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.login-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+}
+
+.login-card input:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 5px #2575fc;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-card button.login-btn {
+  background-color: #2575fc;
+  color: white;
+}
+
+.login-card button.login-btn:hover {
+  background-color: #1a5cd8;
+}
+
+.login-card button.signup-btn {
+  background-color: #eee;
+  color: #333;
+}
+
+.login-card button.signup-btn:hover {
+  background-color: #ddd;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
+}

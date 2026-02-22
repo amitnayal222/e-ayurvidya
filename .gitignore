@@ -31,6 +31,9 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
+node_modules/
+firebase-admin.json
+.next/
 .env*
 
 # vercel
