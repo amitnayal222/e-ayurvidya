@@ -10,7 +10,7 @@ export default function CanvasViewer({ imageUrls, zoom = 1, userId }) {
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     const img = new Image();
-    img.crossOrigin = "anonymous";
+    //img.crossOrigin = "anonymous";
     img.src = imgUrl;
     img.onload = () => {
 
