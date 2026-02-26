@@ -60,7 +60,7 @@ const [unauthorized, setUnauthorized] = useState(false);
         // Generate signed URLs for each image
         const urls = await Promise.all(
           data.imageUrls.map(async (path) => {
-            const res = await fetch(`/api/s3-signed-url?object=${encodeURIComponent(path)}`);
+            const res = await fetch(`/api/s3-signed-url?key=${encodeURIComponent(path)}`);
             const json = await res.json();
             return json.url;
           })
