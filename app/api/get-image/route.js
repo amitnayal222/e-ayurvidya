@@ -12,7 +12,7 @@ const BUCKET = "ayurvidyapdfimg";
 export async function GET(req) {
   try {
     const { searchParams } = new URL(req.url);
-    const objectKey = searchParams.get("key");
+    const objectKey = searchParams.get("object");
     if (!objectKey) {
       return NextResponse.json({ error: "Missing object" }, { status: 400 });
     }
